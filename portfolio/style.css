@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+
+:root {
+    --primaria:#2b5fec;
+    --secundaria: #2f145e;
+    --escuro: #0f172a;
+    --maisEscuro:#0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background: var(--escuro);
+    color: var(--claro);
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    background: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--secundaria), var(--primaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;  
+}
+
+
+.foto-perfil {
+    width: 340px;
+    height: 350px;
+    box-shadow: rgb(18, 87, 160) 0px 20px 30px -10px;
+    border-radius:50% ;
+    border: 4px solid var(--vidro);
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3.6rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.paragrafo-cabeca {
+    font-size: 1.3rem;
+    color: var(--claro);
+}
+
+
+.sobre {
+    padding: 6rem 2rem;
+
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sobre-mim {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 18px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.062);
+    box-shadow: rgb(27, 36, 46) 0px 20px 30px -10px;
+}
+
+.paragrafo {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+.projetos-card{
+    max-width: 24rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--vidro);
+    background: rgba(255, 255, 255, 0.062);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.projetos-card:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transform: translateY(-10px) scale(1.03);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.espaco{
+    padding: 0.5rem;
+}
+
+.projetos-titulo{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 3rem;
+}
+
+.projetos-img{
+   border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    border: unset;
+}
+
+.titulo-card {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.sobre-projeto {
+    font-size: 1rem;
+    font-weight: 350;
+    margin: 1rem 0;
+}
+
+.contato {
+    padding: 6rem 2rem;
+}
+
+.contato-titulo {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.062);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+}
+
+
+.text-form {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.062);
+    border-radius: 8px;
+    border: 1px solid var(--vidro);
+    color: var(--claro);
+    outline: none;
+}
+
+.text-form:focus {
+    border-color: var(--primaria);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 0;
+}
+
+.botao-form {
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--secundaria), var(--primaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ease;
+}
+
+.botao-form img {
+    padding: 0 0.3rem 0 ;
+}
+
+.botao-form:hover{
+    transform: translateY(-4px);
+    transition: 0.3s;
+}
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%), 
+    var(--maisEscuro);
+}
+

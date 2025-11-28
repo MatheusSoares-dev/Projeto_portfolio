@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="script.js"></script>
+    <div class="particulas"></div>
+    <nav class = 'navegacao'> 
+        <ul class="menu">
+            <li> 
+                <a class="menu-link" href="#inicio">Inicio</a>
+            </li>
+            <li> 
+                <a class="menu-link" href="#sobre">Sobre</a>
+            </li>
+            <li> 
+                <a class="menu-link" href="#projetos">Projetos</a>
+            </li>
+            <li> 
+                <a class="menu-link" href="#contato">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id ='inicio' class="cabecalho">
+            <img class="foto-perfil" src="./img/perfil2-0.png" alt="minha foto de perfil">
+            <h1>Matheus Soares</h1>
+            <p class="paragrafo-cabeca">Desenvolvedor Front-End junior </p>
+    </main>
+        <section id="sobre" class="sobre">
+            <h2 class="sobre-titulo">Mais sobre mim</h2>
+            <div class="sobre-mim">
+                <p class="paragrafo">
+                Sou desenvolvedor em transição para a tecnologia, cursando Análise e Desenvolvimento de Sistemas e focado em criar interfaces modernas e funcionais.
+                Atualmente desenvolvo projetos práticos de Front-End, trabalhando com HTML, CSS, JavaScript, responsividade e integração com APIs. Busco evoluir diariamente e fortalecer minha base técnica para atuar como desenvolvedor.
+                </p>
+            </div>
+        </section>
+
+        <section class="projetos" id ='projetos'>
+            <h2 class="projetos-titulo">Meus projetos</h2>
+            <div class='projetos-card'>
+                <img class="projetos-img" src="img/login.png" alt="imagem de login">
+                <h3 class="titulo-card espaco">Pagina de login</h3>
+                <p class="sobre-projeto espaco">Interface de login construída com HTML e CSS, utilizando card flutuante, centralização moderna, responsividade e estilização personalizada para campos, botões e fundo</p>
+            </div>
+            
+        </section>
+
+        <section id="contato" class="contato">
+                <h2 class="contato-titulo"> Entre em Contato</h2>
+                <form class="form-contato" id="formulario" onsubmit="enviarWhats(event)">
+                    <div class="nome-form">
+                        <input class="text-form" id= "text-nome" placeholder="Nome">
+                    </div>  
+                    <div class="grupo-form">
+                        <textarea class="text-form" id="text-msg" rows="3" placeholder="Digite sua Mensagem"></textarea>
+                    </div>  
+                    <button class="botao-form" type="submit">Enviar WhatsApss <img src="img/whatsapp.svg" alt="icone WhatsApss"></button>
+                </form>
+        </section>
+    
+
+</body>
+</html>
